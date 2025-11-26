@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gueddari Walid</title>
+    <title>Gueddari Walid - Fullstack Developer</title>
     <meta
       name="description"
-      content="I'm Gueddari Walid, a fullstack web and mobile developer.In this portfolio , you can find my career and some of my projects samples.Feel free to contact me anytime."
+      content="I'm Gueddari Walid, a fullstack web and mobile developer. In this portfolio, you can find my career and some of my projects samples. Feel free to contact me anytime."
     />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,30 +25,151 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category {
+      background: var(--color-grey-5);
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: all 0.4s ease;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: scale(1.1);
+    }
+
+    .skill-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-item span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-grey-2);
+    }
+
+    /* Tech Tags for Projects */
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+      justify-content: center;
+    }
+
+    .tech-tag {
+      background: var(--color-secondary);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+
+    /* Mobile Projects Section Specific Styles */
+    .hover-items p {
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    /* Fade-in Animation */
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Improvements */
+    @media screen and (max-width: 768px) {
+      .skills-container {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      }
+
+      .controls {
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        justify-content: space-around;
+      }
+    }
+  </style>
   <body class="main-content">
     <header class="container header active" id="home">
       <div class="header-content">
         <div class="left-header">
           <div class="h-shape"></div>
           <div class="image">
-            <img src="img/me.jpg" alt="" />
+            <img src="img/me.jpg" alt="Gueddari Walid" />
           </div>
         </div>
         <div class="right-header">
           <h1 class="name">
             Hi, I'm
             <span>Gueddari Walid.</span>
-            A Fullstack Web and mobile Developer.
+            A Fullstack Web and Mobile Developer.
           </h1>
           <p>
-            With a love for creating digital experiences, I thrive on turning
-            ideas into functional, user-friendly websites and mobile apps. I'm
-            dedicated to continuous learning and enjoy the creative process of
-            both front-end and back-end development.
+            With a strong background in modern web and mobile development, I
+            specialize in building scalable, user-centric applications across
+            Flutter, Next.js, and backend technologies like Fastify and
+            TypeScript. I enjoy transforming complex ideas into polished,
+            high-performance digital products, from mobile apps to full-stack
+            platforms. Driven by continuous learning and clean engineering
+            practices, I thrive in the intersection of front-end, back-end, and
+            cloud-based architectures to deliver reliable and impactful
+            solutions.
           </p>
 
           <div class="btn-con">
-            <a href="English_CV.pdf" download="GueddariWalid" class="main-btn">
+            <a
+              href="Gueddari_Walid_CV.pdf"
+              download="GueddariWalid"
+              class="main-btn"
+            >
               <span class="btn-text">Download CV</span>
               <span class="btn-icon"><i class="fas fa-download"></i></span>
             </a>
@@ -69,15 +190,16 @@
           <div class="left-about">
             <h4>Information About me</h4>
             <p>
-              Graduated with a fundamental degree in management information
-              systems and a student in computer engineering. My educational
-              background and personal efforts have allowed me to acquire
-              in-depth knowledge and skills in web development.
+              Graduated with a fundamental degree in Management Information
+              Systems and currently pursuing studies in Computer Engineering.
+              Through my academic background and continuous self-learning, I
+              have developed strong, in-depth skills in modern web and software
+              development.
               <br />
             </p>
             <div class="btn-con">
               <a
-                href="English_CV.pdf"
+                href="Gueddari_Walid_CV.pdf"
                 download="GueddariWalid"
                 class="main-btn"
               >
@@ -103,7 +225,7 @@
                 <p class="small-text">
                   Years of
                   <br />
-                  freelancing
+                  experience
                 </p>
               </div>
             </div>
@@ -132,82 +254,101 @@
 
         <div class="about-stats">
           <h4 class="stat-title">My Skills</h4>
-          <div class="slider-area">
-            <h4 class="title_skills">Back-end</h4>
-
-            <div class="wrapper">
-              <div class="item back">
-                <img alt="Js logo" src="img/logos/js.png" />
-              </div>
-
-              <div class="item back">
-                <img alt="PHP logo" src="img/logos/php.png" />
-              </div>
-              <div class="item back">
-                <img alt="Java logo" src="img/logos/java.png" />
-              </div>
-              <div class="item back">
-                <img alt="Pyhton logo" src="img/logos/python.png" />
-              </div>
-              <div class="item back">
-                <img alt="Dart logo" src="img/logos/dart.png" />
-              </div>
-              <div class="item back">
-                <img alt="GraphQL logo" src="img/logos/graphql.png" />
-              </div>
-              <div class="item back">
-                <img alt="NodeJS logo" src="img/logos/node.png" />
-              </div>
-            </div>
-          </div>
-          <div class="slider-area">
-            <h4 class="title_skills">Front-End</h4>
-            <div class="wrapper short">
-              <div class="item">
-                <img alt="Bootstrap logo" src="img/logos/bootstrap.png" />
-              </div>
-              <div class="item">
-                <img alt="React logo" src="img/logos/react.png" />
-              </div>
-              <div class="item">
-                <img alt="Flutter logo" src="img/logos/flutter.png" />
-              </div>
-
-              <!-- <div class="item"><img alt="" src="img/logos/git.png" /></div> -->
-            </div>
-          </div>
-          <div class="slider-area">
-            <h4 class="title_skills">Frameworks</h4>
-            <div class="wrapper short">
-              <div class="item">
-                <img alt="Laravel logo" src="img/logos/laravel.png" />
-              </div>
-              <div class="item">
-                <img alt="Symfony logo" src="img/logos/symfony.svg" />
-              </div>
-              <div class="item">
-                <img alt="Spring logo" src="img/logos/spring.png" />
-              </div>
-              <div class="item">
-                <img alt="ExpressJS logo" src="img/logos/express.png" />
+          <div class="skills-container">
+            <div class="skill-category">
+              <h4 class="title_skills">Back-end</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <img alt="Js logo" src="img/logos/js.png" />
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="PHP logo" src="img/logos/php.png" />
+                  <span>PHP</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="Java logo" src="img/logos/java.png" />
+                  <span>Java</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="Python logo" src="img/logos/python.png" />
+                  <span>Python</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="Dart logo" src="img/logos/dart.png" />
+                  <span>Dart</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="GraphQL logo" src="img/logos/graphql.png" />
+                  <span>GraphQL</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="NodeJS logo" src="img/logos/node.png" />
+                  <span>Node.js</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="slider-area">
-            <h4 class="title_skills">Databases</h4>
-            <div class="wrapper short">
-              <div class="item">
-                <img alt="MySql logo" src="img/logos/mysql.png" />
+
+            <div class="skill-category">
+              <h4 class="title_skills">Front-End</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <img alt="Bootstrap logo" src="img/logos/bootstrap.png" />
+                  <span>Bootstrap</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="React logo" src="img/logos/react.png" />
+                  <span>React</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="Flutter logo" src="img/logos/flutter.png" />
+                  <span>Flutter</span>
+                </div>
               </div>
-              <div class="item">
-                <img alt="Firebase logo" src="img/logos/firebase.png" />
+            </div>
+
+            <div class="skill-category">
+              <h4 class="title_skills">Frameworks</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <img alt="Laravel logo" src="img/logos/laravel.png" />
+                  <span>Laravel</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="Symfony logo" src="img/logos/symfony.svg" />
+                  <span>Symfony</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="Spring logo" src="img/logos/spring.png" />
+                  <span>Spring</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="ExpressJS logo" src="img/logos/express.png" />
+                  <span>Express.js</span>
+                </div>
               </div>
-              <div class="item">
-                <img alt="MongoDB logo" src="img/logos/mongo.png" />
+            </div>
+
+            <div class="skill-category">
+              <h4 class="title_skills">Databases</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <img alt="MySql logo" src="img/logos/mysql.png" />
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="Firebase logo" src="img/logos/firebase.png" />
+                  <span>Firebase</span>
+                </div>
+                <div class="skill-item">
+                  <img alt="MongoDB logo" src="img/logos/mongo.png" />
+                  <span>MongoDB</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <h4 class="stat-title">My Timeline</h4>
         <div class="timeline">
           <div class="row">
@@ -217,10 +358,10 @@
 
                 <div class="timeline-item">
                   <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
+                    <i class="fas fa-graduation-cap"></i>
                   </div>
 
-                  <p class="tl-duration">2021 - present</p>
+                  <p class="tl-duration">2021 - 2024</p>
                   <h5>
                     Software Engineering
                     <span>- Polytechnic School, Sousse, TN</span>
@@ -228,11 +369,11 @@
                 </div>
                 <div class="timeline-item">
                   <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
+                    <i class="fas fa-graduation-cap"></i>
                   </div>
                   <p class="tl-duration">2018 - 2021</p>
                   <h5>
-                    BACHELOR’S DEGREE IN BUSINESS INFORMATICS
+                    BACHELOR'S DEGREE IN BUSINESS INFORMATICS
                     <span>- Higher Management Institute, Sousse, TN</span>
                   </h5>
                 </div>
@@ -240,7 +381,50 @@
             </div>
             <div class="col-md-6">
               <h4 class="timeline-title">Experience</h4>
+              <div class="timeline-item">
+                <div class="tl-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
 
+                <p class="tl-duration">Juily 2024 - Present</p>
+                <h5>
+                  Fullstack Mobile and Web Developer
+                  <span>- CyberBridge, Sousse, TN</span>
+                </h5>
+                <p>
+                  - Created Web3 mobile applications using Flutter with
+                  integrated blockchain technology and converted design mockups
+                  into responsive, functional mobile apps. .
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+
+                <p class="tl-duration">Fabruary - Juin 2024</p>
+                <h5>
+                  Mobile Developer Intern
+                  <span>- Sartex Group, Monastir, TN</span>
+                </h5>
+                <p>
+                  development of a mobile app for industrial textile model
+                  auto-balancing with real-time machine failure tracking and
+                  predictive analytics
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+
+                <p class="tl-duration">Summer 2023</p>
+                <h5>
+                  Web Intern
+                  <span>- Halber, Monastir, TN</span>
+                </h5>
+                <p>Developed a stock management platform using Laravel</p>
+              </div>
               <div class="timeline-item">
                 <div class="tl-icon">
                   <i class="fas fa-briefcase"></i>
@@ -248,7 +432,7 @@
 
                 <p class="tl-duration">Summer 2022</p>
                 <h5>
-                  Intern
+                  Web Intern
                   <span>- Halber, Monastir, TN</span>
                 </h5>
                 <p>
@@ -263,7 +447,7 @@
 
                 <p class="tl-duration">February 2021 - May 2021</p>
                 <h5>
-                  GRADUATION INTERNSHIP
+                  Web Intern
                   <span>- CNRPS, Sousse, TN</span>
                 </h5>
                 <p>
@@ -275,11 +459,13 @@
           </div>
         </div>
       </section>
+
+      <!-- Web Projects Section -->
       <section class="container" id="portfolio">
         <div class="main-title">
           <h2>
             My
-            <span>Portfolio</span>
+            <span>Web Projects</span>
             <span class="bg-text">My Work</span>
           </h2>
         </div>
@@ -295,10 +481,42 @@
         <div class="portfolios">
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/delivgo/main.png" alt="" />
+              <img
+                src="assets/img/Captures/tradeup_web.png"
+                alt="Chati Project"
+              />
+            </div>
+            <div class="hover-items">
+              <h3>TradeUp AI</h3>
+              <p>Real-time Trading plateform</p>
+              <div class="icons">
+                <a
+                  href="https://tradeup-sepia.vercel.app/"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/watch?v=G0c_sfHEVI8"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="assets/img/Captures/delivgo/main.png"
+                alt="Delivgo Project"
+              />
             </div>
             <div class="hover-items">
               <h3>Delivgo</h3>
+              <p>A delivery management platform</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/Delivgo"
@@ -315,10 +533,14 @@
           </div>
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/esso/main.png" alt="" />
+              <img
+                src="assets/img/Captures/esso/main.png"
+                alt="Gestion Esso Project"
+              />
             </div>
             <div class="hover-items">
               <h3>Gestion Esso</h3>
+              <p>Management system for Esso stations</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/Kiosque"
@@ -339,10 +561,14 @@
           </div>
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/mobilplus/main.png" alt="" />
+              <img
+                src="assets/img/Captures/mobilplus/main.png"
+                alt="MobilPlus Project"
+              />
             </div>
             <div class="hover-items">
               <h3>MobilPlus</h3>
+              <p>Mobile service management platform</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/mobilplus"
@@ -363,10 +589,14 @@
           </div>
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/jobify/main1.png" alt="" />
+              <img
+                src="assets/img/Captures/jobify/main1.png"
+                alt="JobiFy Project"
+              />
             </div>
             <div class="hover-items">
               <h3>JobiFy</h3>
+              <p>Job-finding platform</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/jobify"
@@ -381,10 +611,11 @@
 
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/mrmMain.PNG" alt="" />
+              <img src="assets/img/Captures/mrmMain.PNG" alt="MRM Project" />
             </div>
             <div class="hover-items">
               <h3>MRM</h3>
+              <p>Management system</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/PSC"
@@ -405,10 +636,14 @@
           </div>
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/CliniqueMain.PNG" alt="" />
+              <img
+                src="assets/img/Captures/CliniqueMain.PNG"
+                alt="Clinique Project"
+              />
             </div>
             <div class="hover-items">
               <h3>Clinique</h3>
+              <p>Clinic management system</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/clinique"
@@ -422,10 +657,14 @@
           </div>
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/Tunmain.png" alt="" />
+              <img
+                src="assets/img/Captures/Tunmain.png"
+                alt="TuniFlix Project"
+              />
             </div>
             <div class="hover-items">
               <h3>TuniFlix</h3>
+              <p>Tunisian streaming platform</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/TuniFlixFinal"
@@ -439,10 +678,14 @@
           </div>
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/ProTaskMain.PNG" alt="" />
+              <img
+                src="assets/img/Captures/ProTaskMain.PNG"
+                alt="Protask Project"
+              />
             </div>
             <div class="hover-items">
               <h3>Protask</h3>
+              <p>Task management application</p>
               <div class="icons">
                 <a
                   href="https://github.com/welidwg/protaskk"
@@ -454,19 +697,190 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Mobile Projects Section -->
+      <section class="container" id="mobile-projects">
+        <div class="main-title">
+          <h2>
+            My
+            <span>Mobile Projects</span>
+            <span class="bg-text">Mobile Apps</span>
+          </h2>
+        </div>
+        <p class="port-text">
+          Here are some of my mobile applications developed with Flutter and
+          other technologies.
+        </p>
+        <div class="portfolios">
           <div class="portfolio-item">
             <div class="image">
-              <img src="assets/img/Captures/chati main.PNG" alt="" />
+              <img
+                src="assets/img/Captures/mobile/moveup.png"
+                alt="Delivery App"
+              />
             </div>
             <div class="hover-items">
-              <h3>Chati</h3>
+              <h3>MoveUp - Move to earn</h3>
+              <p>Fitness app that rewards users based on their steps</p>
               <div class="icons">
                 <a
-                  href="https://github.com/welidwg/chati"
+                  href="https://play.google.com/store/apps/details?id=com.wg.mobilitytracking"
                   target="_blank"
                   class="icon"
                 >
-                  <i class="fab fa-github"></i>
+                  <i class="fab fa-google-play"></i>
+                </a>
+                <a
+                  href="https://apps.apple.com/us/app/moveup-move-to-earn/id6630387673"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-apple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="assets/img/Captures/mobile/aqeal.png"
+                alt="Delivery App"
+              />
+            </div>
+            <div class="hover-items">
+              <h3>Aqeal</h3>
+              <p>Car market app</p>
+              <div class="icons">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.peakchain.aqeal_mobile"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-google-play"></i>
+                </a>
+                <a
+                  href="https://testflight.apple.com/join/vcJfCbnF"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-apple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="assets/img/Captures/mobile/QISTASCHAIN.png"
+                alt="Delivery App"
+              />
+            </div>
+            <div class="hover-items">
+              <h3>QistasChain</h3>
+              <p>
+                Web3 App that rewards users with QToken by submitting reviews on
+                chain
+              </p>
+              <div class="icons">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.peaksoft.qistaschain"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-google-play"></i>
+                </a>
+                <a
+                  href="https://testflight.apple.com/join/uaJXGf1N"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-apple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="assets/img/Captures/mobile/sarb.png"
+                alt="Delivery App"
+              />
+            </div>
+            <div class="hover-items">
+              <h3>Sarb Stablecoin</h3>
+              <p>Shariah Compliant token Sarb/USDsc stablecoin wallet app</p>
+              <div class="icons">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.peakchain.sar_stablecoin"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-google-play"></i>
+                </a>
+                <a
+                  href="https://testflight.apple.com/join/HByTjCdW"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-apple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="assets/img/Captures/mobile/mobility.jpg"
+                alt="Delivery App"
+              />
+            </div>
+            <div class="hover-items">
+              <h3>Peakchain Mobility</h3>
+              <p>UI app for an upcoming project</p>
+              <div class="icons">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.peakchain.mobility"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-google-play"></i>
+                </a>
+                <a
+                  href="https://testflight.apple.com/join/EekkAGuh"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-apple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="image">
+              <img
+                src="assets/img/Captures/mobile/tradeup.png"
+                alt="Delivery App"
+              />
+            </div>
+            <div class="hover-items">
+              <h3>TradeUp AI</h3>
+              <p>Real-time trading plateform</p>
+              <div class="icons">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.peakchain.tradeup"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-google-play"></i>
+                </a>
+                <a
+                  href="https://apps.apple.com/us/app/tradeup-ai/id6744612908"
+                  target="_blank"
+                  class="icon"
+                >
+                  <i class="fab fa-apple"></i>
                 </a>
               </div>
             </div>
@@ -485,8 +899,6 @@
           </div>
           <div class="contact-content-con">
             <div class="left-contact">
-              <!-- <h4>My contacts</h4> -->
-              <!-- <p align="center">You can find more details below</p> -->
               <div class="contact-info">
                 <div class="contact-item">
                   <div class="icon">
@@ -512,9 +924,9 @@
                     <span>Mobile Number :</span>
                   </div>
                   <p>
-                    <a href="tel:+21693964236">
+                    <a href="tel:+21697488241">
                       <i class="fas fa-phone-volume"></i>
-                      +216 93964236
+                      +216 97488241
                     </a>
                   </p>
                 </div>
@@ -539,7 +951,7 @@
                   "
                 >
                   <a
-                    href="https://www.linkedin.com/in/welid-gueddari-b5ba231a0/"
+                    href="https://www.linkedin.com/in/walidgueddari/"
                     target="_blank"
                   >
                     <i class="fab fa-linkedin"></i>
@@ -550,34 +962,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="right-contact">
-              <form action="" class="contact-form">
-                <div class="input-control i-c-2">
-                  <input type="text" required placeholder="YOUR NAME" />
-                  <input type="email" required placeholder="YOUR EMAIL" />
-                </div>
-                <div class="input-control">
-                  <input type="text" required placeholder="ENTER SUBJECT" />
-                </div>
-                <div class="input-control">
-                  <textarea
-                    name=""
-                    id=""
-                    cols="15"
-                    rows="8"
-                    placeholder="Message Here..."
-                  ></textarea>
-                </div>
-                <div class="submit-btn">
-                  <a href="#" class="main-btn">
-                    <span class="btn-text">Download CV</span>
-                    <span class="btn-icon">
-                      <i class="fas fa-download"></i>
-                    </span>
-                  </a>
-                </div>
-              </form>
-            </div> -->
           </div>
         </div>
       </section>
@@ -586,7 +970,7 @@
     <div class="controls">
       <img
         src="img/logos/MyLogoWhite.png"
-        alt=""
+        alt="Gueddari Walid Logo"
         id="mylogo"
         class=""
         width="30"
@@ -598,9 +982,11 @@
         <i class="fas fa-user"></i>
       </div>
       <div class="control" data-id="portfolio">
-        <i class="fas fa-briefcase"></i>
+        <i class="fas fa-desktop"></i>
       </div>
-
+      <div class="control" data-id="mobile-projects">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
       <div class="control" data-id="contact">
         <i class="fas fa-envelope-open"></i>
       </div>
