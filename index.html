@@ -6,261 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gueddari Walid - Fullstack Developer</title>
-    <meta name="theme-color" content="#0a0e27" />
+    <meta name="theme-color" content="#0A0A0A" />
     <meta name="description" content="I'm Gueddari Walid, a fullstack web and mobile developer. In this portfolio, you can find my career and some of my projects samples. Feel free to contact me anytime." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gueddari Walid - Fullstack Developer" />
+    <meta property="og:description" content="Fullstack web and mobile developer. Flutter, React, Node.js and Web3 projects, plus my CV and contact details." />
+    <meta property="og:image" content="img/me.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="img/logos/MyLogo.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
-<style>
-    .skills-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2.5rem;
-        margin-top: 2rem;
-    }
-
-    .skill-category {
-        background: rgba(42, 46, 53, 0.6);
-        backdrop-filter: blur(10px);
-        padding: 2rem;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    .skill-category::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, #ff006e, #8338ec);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s ease;
-    }
-
-    .skill-category:hover::before {
-        transform: scaleX(1);
-    }
-
-    .skill-category:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 60px rgba(255, 0, 110, 0.3);
-        border-color: rgba(255, 0, 110, 0.5);
-        background: rgba(42, 46, 53, 0.8);
-    }
-
-    .skill-category .title_skills {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, #ffffff 0%, #ff006e 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-align: center;
-        letter-spacing: 1px;
-    }
-
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .skill-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 1rem;
-        border-radius: 15px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .skill-item::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background: linear-gradient(135deg,
-                rgba(255, 0, 110, 0.2),
-                rgba(131, 56, 236, 0.2));
-        transform: translate(-50%, -50%);
-        transition: width 0.4s, height 0.4s;
-    }
-
-    .skill-item:hover::before {
-        width: 100%;
-        height: 100%;
-    }
-
-    .skill-item:hover {
-        transform: translateY(-8px) scale(1.1);
-        border-color: rgba(255, 0, 110, 0.3);
-        box-shadow: 0 10px 30px rgba(255, 0, 110, 0.2);
-    }
-
-    .skill-item img {
-        width: 55px;
-        height: 55px;
-        object-fit: contain;
-        margin-bottom: 0.8rem;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-        transition: all 0.4s ease;
-        position: relative;
-        z-index: 1;
-    }
-
-    .skill-item:hover img {
-        transform: scale(1.15) rotate(5deg);
-        filter: drop-shadow(0 8px 16px rgba(255, 0, 110, 0.4));
-    }
-
-    .skill-item span {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--color-grey-2);
-        transition: all 0.4s ease;
-        position: relative;
-        z-index: 1;
-    }
-
-    .skill-item:hover span {
-        color: var(--color-white);
-        transform: scale(1.1);
-    }
-
-    /* Tech Tags for Projects */
-    .tech-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin: 1rem 0;
-        justify-content: center;
-    }
-
-    .tech-tag {
-        background: linear-gradient(135deg, #ff006e, #8338ec);
-        color: white;
-        padding: 0.4rem 1rem;
-        border-radius: 25px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        box-shadow: 0 4px 15px rgba(255, 0, 110, 0.3);
-        transition: all 0.3s ease;
-    }
-
-    .tech-tag:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(255, 0, 110, 0.4);
-    }
-
-    /* Mobile Projects Section Specific Styles */
-    .hover-items p {
-        margin-bottom: 0.5rem;
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .hover-items h3 {
-        font-size: 1.8rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Fade-in Animation */
-    .fade-in {
-        animation: fadeIn 0.8s ease forwards;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Enhanced Section Transitions */
-    section {
-        animation: sectionFadeIn 0.6s ease-out;
-    }
-
-    @keyframes sectionFadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    /* Improved Port Text */
-    .port-text {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--color-grey-2);
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    /* Responsive Improvements */
-    @media screen and (max-width: 768px) {
-        .skills-container {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .skills-grid {
-            grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
-            gap: 1rem;
-        }
-
-        .skill-category {
-            padding: 1.5rem;
-        }
-
-        .controls {
-            flex-direction: row;
-            bottom: 0;
-            top: auto;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            justify-content: space-around;
-            background: rgba(26, 30, 46, 0.9);
-            backdrop-filter: blur(20px);
-            border-radius: 30px 30px 0 0;
-            padding: 1rem;
-            border-top: 2px solid rgba(255, 0, 110, 0.3);
-        }
-    }
-</style>
 
 <body class="main-content">
     <header class="container header active" id="home">
@@ -272,27 +31,24 @@
                 </div>
             </div>
             <div class="right-header">
+                <span class="hero-badge">Fullstack Developer & Architect</span>
                 <h1 class="name">
-                    Hi, I'm
-                    <span>Gueddari Walid.</span>
-                    A Fullstack Web and Mobile Developer.
+                    Engineering digital 
+                    <br />
+                    <span>experiences that scale.</span>
                 </h1>
                 <p>
-                    With a strong background in modern web and mobile development, I
-                    specialize in building scalable, user-centric applications across
-                    Flutter, Next.js, and backend technologies like Fastify and
-                    TypeScript. I enjoy transforming complex ideas into polished,
-                    high-performance digital products, from mobile apps to full-stack
-                    platforms. Driven by continuous learning and clean engineering
-                    practices, I thrive in the intersection of front-end, back-end, and
-                    cloud-based architectures to deliver reliable and impactful
-                    solutions.
+                    I'm Walid Gueddari, bridging the gap between sleek front-end design and robust back-end architecture using modern tools like Flutter, React, and Fastify. I specialize in building user-centric, high-performance web and Web3 applications.
                 </p>
 
                 <div class="btn-con">
-                    <a href="Gueddari_Walid_CV.pdf" download="GueddariWalid" class="main-btn">
+                    <a href="#portfolio" class="main-btn" data-nav="portfolio">
+                        <span class="btn-text">View My Work</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a href="Gueddari_Walid_CV.pdf" download="GueddariWalid" class="main-btn outline-btn">
                         <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                        <span class="btn-icon"><i class="fas fa-download" aria-hidden="true"></i></span>
                     </a>
                 </div>
             </div>
@@ -309,19 +65,16 @@
             </div>
             <div class="about-container">
                 <div class="left-about">
-                    <h4>Information About me</h4>
+                    <h4>Philosophy & Core Focus</h4>
                     <p>
-                        Graduated with a fundamental degree in Management Information
-                        Systems and currently pursuing studies in Computer Engineering.
-                        Through my academic background and continuous self-learning, I
-                        have developed strong, in-depth skills in modern web and software
-                        development.
+                        I am a design-minded software engineer who loves turning complex problems into elegant, scalable solutions. With professional experience moving products from concept to deployment, I specialize in building end-to-end applications that are as beautiful as they are reliable.
                         <br />
+                        My focus lies heavily on delivering performance-driven Web and Mobile apps, exploring Web3 technologies, and utilizing robust CI/CD and clean architecture principles.
                     </p>
                     <div class="btn-con">
                         <a href="Gueddari_Walid_CV.pdf" download="GueddariWalid" class="main-btn">
                             <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                            <span class="btn-icon"><i class="fas fa-download" aria-hidden="true"></i></span>
                         </a>
                     </div>
                 </div>
@@ -346,24 +99,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="about-item d-none" style="visibility: hidden">
+                    <div class="about-item">
                         <div class="abt-text">
-                            <!-- <p class="large-text">300+</p>
-                <p class="small-text">
-                  Happy
-                  <br />
-                  Clients
-                </p> -->
-                        </div>
-                    </div>
-                    <div class="about-item" style="display: none">
-                        <div class="abt-text">
-                            <!-- <p class="large-text">400+</p>
-                <p class="small-text">
-                  Customer
-                  <br />
-                  reviews
-                </p> -->
+                            <p class="large-text">6</p>
+                            <p class="small-text">
+                                Apps live on
+                                <br />
+                                App Store &amp; Play
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -475,7 +218,7 @@
 
                             <div class="timeline-item">
                                 <div class="tl-icon">
-                                    <i class="fas fa-graduation-cap"></i>
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                                 </div>
 
                                 <p class="tl-duration">2021 - 2024</p>
@@ -486,11 +229,11 @@
                             </div>
                             <div class="timeline-item">
                                 <div class="tl-icon">
-                                    <i class="fas fa-graduation-cap"></i>
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                                 </div>
                                 <p class="tl-duration">2018 - 2021</p>
                                 <h5>
-                                    BACHELOR'S DEGREE IN BUSINESS INFORMATICS
+                                    Bachelor's degree in Business Informatics
                                     <span>- Higher Management Institute, Sousse, TN</span>
                                 </h5>
                             </div>
@@ -500,10 +243,10 @@
                         <h4 class="timeline-title">Experience</h4>
                         <div class="timeline-item">
                             <div class="tl-icon">
-                                <i class="fas fa-briefcase"></i>
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
                             </div>
 
-                            <p class="tl-duration">Juily 2024 - Present</p>
+                            <p class="tl-duration">July 2024 - Present</p>
                             <h5>
                                 Fullstack Mobile and Web Developer
                                 <span>- CyberBridge, Sousse, TN</span>
@@ -511,28 +254,28 @@
                             <p>
                                 - Created Web3 mobile applications using Flutter with
                                 integrated blockchain technology and converted design mockups
-                                into responsive, functional mobile apps. .
+                                into responsive, functional mobile apps.
                             </p>
                         </div>
                         <div class="timeline-item">
                             <div class="tl-icon">
-                                <i class="fas fa-briefcase"></i>
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
                             </div>
 
-                            <p class="tl-duration">Fabruary - Juin 2024</p>
+                            <p class="tl-duration">February - June 2024</p>
                             <h5>
                                 Mobile Developer Intern
                                 <span>- Sartex Group, Monastir, TN</span>
                             </h5>
                             <p>
-                                development of a mobile app for industrial textile model
+                                Development of a mobile app for industrial textile model
                                 auto-balancing with real-time machine failure tracking and
                                 predictive analytics
                             </p>
                         </div>
                         <div class="timeline-item">
                             <div class="tl-icon">
-                                <i class="fas fa-briefcase"></i>
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
                             </div>
 
                             <p class="tl-duration">Summer 2023</p>
@@ -544,7 +287,7 @@
                         </div>
                         <div class="timeline-item">
                             <div class="tl-icon">
-                                <i class="fas fa-briefcase"></i>
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
                             </div>
 
                             <p class="tl-duration">Summer 2022</p>
@@ -553,13 +296,12 @@
                                 <span>- Halber, Monastir, TN</span>
                             </h5>
                             <p>
-                                during this internship, I released JobiFy , a job-finding
-                                platform
+                                Released JobiFy, a job-finding platform
                             </p>
                         </div>
                         <div class="timeline-item">
                             <div class="tl-icon">
-                                <i class="fas fa-briefcase"></i>
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
                             </div>
 
                             <p class="tl-duration">February 2021 - May 2021</p>
@@ -568,8 +310,7 @@
                                 <span>- CNRPS, Sousse, TN</span>
                             </h5>
                             <p>
-                                during this internship, I released PROTASK , my graduation
-                                project
+                                Released ProTask, my graduation project
                             </p>
                         </div>
                     </div>
@@ -591,89 +332,89 @@
                 languages.
                 <br />
                 <span style="font-size: 14px">
-                    (You can find screenshots and more informations in the project's
+                    (You can find screenshots and more information in the project's
                     github repository)
                 </span>
             </p>
             <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/tradeup_web.png" alt="Chati Project" />
+                        <img src="assets/img/Captures/tradeup_web.png" alt="TradeUp AI screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>TradeUp AI</h3>
-                        <p>Real-time Trading plateform</p>
+                        <p>Real-time trading platform</p>
                         <div class="icons">
-                            <a href="https://tradeup-sepia.vercel.app/" target="_blank" class="icon">
-                                <i class="fas fa-link"></i>
+                            <a href="https://tradeup-sepia.vercel.app/" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Open the TradeUp AI live site">
+                                <i class="fas fa-link" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.youtube.com/watch?v=G0c_sfHEVI8" target="_blank" class="icon">
-                                <i class="fas fa-play"></i>
+                            <a href="https://www.youtube.com/watch?v=G0c_sfHEVI8" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Watch the TradeUp AI demo video">
+                                <i class="fas fa-play" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/delivgo/main.png" alt="Delivgo Project" />
+                        <img src="assets/img/Captures/delivgo/main.png" alt="Delivgo screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>Delivgo</h3>
                         <p>A delivery management platform</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/Delivgo" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/Delivgo" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the Delivgo source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                             <!-- <a href="#" class="icon">
-                  <i class="fas fa-link"></i>
+                  <i class="fas fa-link" aria-hidden="true"></i>
                 </a> -->
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/esso/main.png" alt="Gestion Esso Project" />
+                        <img src="assets/img/Captures/esso/main.png" alt="Gestion Esso screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>Gestion Esso</h3>
                         <p>Management system for Esso stations</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/Kiosque" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/Kiosque" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the Gestion Esso source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.gestionesso.fr" target="_blank" class="icon">
-                                <i class="fas fa-link"></i>
+                            <a href="https://www.gestionesso.fr" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Open the Gestion Esso live site">
+                                <i class="fas fa-link" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mobilplus/main.png" alt="MobilPlus Project" />
+                        <img src="assets/img/Captures/mobilplus/main.png" alt="MobilPlus screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>MobilPlus</h3>
                         <p>Mobile service management platform</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/mobilplus" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/mobilplus" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the MobilPlus source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href="http://s976387802.onlinehome.fr" target="_blank" class="icon">
-                                <i class="fas fa-link"></i>
+                            <a href="http://s976387802.onlinehome.fr" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Open the MobilPlus live site">
+                                <i class="fas fa-link" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/jobify/main1.png" alt="JobiFy Project" />
+                        <img src="assets/img/Captures/jobify/main1.png" alt="JobiFy screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>JobiFy</h3>
                         <p>Job-finding platform</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/jobify" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/jobify" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the JobiFy source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -681,59 +422,59 @@
 
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mrmMain.PNG" alt="MRM Project" />
+                        <img src="assets/img/Captures/mrmMain.PNG" alt="MRM screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>MRM</h3>
                         <p>Management system</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/PSC" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/PSC" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the MRM source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.mrm.great-site.net/main/" target="_blank" class="icon">
-                                <i class="fas fa-link"></i>
+                            <a href="https://www.mrm.great-site.net/main/" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Open the MRM live site">
+                                <i class="fas fa-link" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/CliniqueMain.PNG" alt="Clinique Project" />
+                        <img src="assets/img/Captures/CliniqueMain.PNG" alt="Clinique screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>Clinique</h3>
                         <p>Clinic management system</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/clinique" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/clinique" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the Clinique source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/Tunmain.png" alt="TuniFlix Project" />
+                        <img src="assets/img/Captures/Tunmain.png" alt="TuniFlix screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>TuniFlix</h3>
                         <p>Tunisian streaming platform</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/TuniFlixFinal" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/TuniFlixFinal" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the TuniFlix source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/ProTaskMain.PNG" alt="Protask Project" />
+                        <img src="assets/img/Captures/ProTaskMain.PNG" alt="Protask screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>Protask</h3>
                         <p>Task management application</p>
                         <div class="icons">
-                            <a href="https://github.com/welidwg/protaskk" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/welidwg/protaskk" target="_blank" rel="noopener noreferrer" class="icon" aria-label="View the Protask source code on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -757,41 +498,41 @@
             <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mobile/moveup.png" alt="Delivery App" />
+                        <img src="assets/img/Captures/mobile/moveup.png" alt="MoveUp - Move to earn screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>MoveUp - Move to earn</h3>
                         <p>Fitness app that rewards users based on their steps</p>
                         <div class="icons">
-                            <a href="https://play.google.com/store/apps/details?id=com.wg.mobilitytracking" target="_blank" class="icon">
-                                <i class="fab fa-google-play"></i>
+                            <a href="https://play.google.com/store/apps/details?id=com.wg.mobilitytracking" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get MoveUp - Move to earn on Google Play">
+                                <i class="fab fa-google-play" aria-hidden="true"></i>
                             </a>
-                            <a href="https://apps.apple.com/us/app/moveup-move-to-earn/id6630387673" target="_blank" class="icon">
-                                <i class="fab fa-apple"></i>
+                            <a href="https://apps.apple.com/us/app/moveup-move-to-earn/id6630387673" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get MoveUp - Move to earn on the App Store">
+                                <i class="fab fa-apple" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mobile/aqeal.png" alt="Delivery App" />
+                        <img src="assets/img/Captures/mobile/aqeal.png" alt="Aqeal screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>Aqeal</h3>
                         <p>Car market app</p>
                         <div class="icons">
-                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.aqeal_mobile" target="_blank" class="icon">
-                                <i class="fab fa-google-play"></i>
+                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.aqeal_mobile" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get Aqeal on Google Play">
+                                <i class="fab fa-google-play" aria-hidden="true"></i>
                             </a>
-                            <a href="https://testflight.apple.com/join/vcJfCbnF" target="_blank" class="icon">
-                                <i class="fab fa-apple"></i>
+                            <a href="https://testflight.apple.com/join/vcJfCbnF" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Join the Aqeal TestFlight beta">
+                                <i class="fab fa-apple" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mobile/QISTASCHAIN.png" alt="Delivery App" />
+                        <img src="assets/img/Captures/mobile/QISTASCHAIN.png" alt="QistasChain screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>QistasChain</h3>
@@ -800,62 +541,62 @@
                             chain
                         </p>
                         <div class="icons">
-                            <a href="https://play.google.com/store/apps/details?id=com.peaksoft.qistaschain" target="_blank" class="icon">
-                                <i class="fab fa-google-play"></i>
+                            <a href="https://play.google.com/store/apps/details?id=com.peaksoft.qistaschain" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get QistasChain on Google Play">
+                                <i class="fab fa-google-play" aria-hidden="true"></i>
                             </a>
-                            <a href="https://testflight.apple.com/join/uaJXGf1N" target="_blank" class="icon">
-                                <i class="fab fa-apple"></i>
+                            <a href="https://testflight.apple.com/join/uaJXGf1N" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Join the QistasChain TestFlight beta">
+                                <i class="fab fa-apple" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mobile/sarb.png" alt="Delivery App" />
+                        <img src="assets/img/Captures/mobile/sarb.png" alt="Sarb Stablecoin screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>Sarb Stablecoin</h3>
                         <p>Shariah Compliant token Sarb/USDsc stablecoin wallet app</p>
                         <div class="icons">
-                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.sar_stablecoin" target="_blank" class="icon">
-                                <i class="fab fa-google-play"></i>
+                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.sar_stablecoin" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get Sarb Stablecoin on Google Play">
+                                <i class="fab fa-google-play" aria-hidden="true"></i>
                             </a>
-                            <a href="https://testflight.apple.com/join/HByTjCdW" target="_blank" class="icon">
-                                <i class="fab fa-apple"></i>
+                            <a href="https://testflight.apple.com/join/HByTjCdW" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Join the Sarb Stablecoin TestFlight beta">
+                                <i class="fab fa-apple" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mobile/mobility.jpg" alt="Delivery App" />
+                        <img src="assets/img/Captures/mobile/mobility.jpg" alt="Peakchain Mobility screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>Peakchain Mobility</h3>
                         <p>UI app for an upcoming project</p>
                         <div class="icons">
-                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.mobility" target="_blank" class="icon">
-                                <i class="fab fa-google-play"></i>
+                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.mobility" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get Peakchain Mobility on Google Play">
+                                <i class="fab fa-google-play" aria-hidden="true"></i>
                             </a>
-                            <a href="https://testflight.apple.com/join/EekkAGuh" target="_blank" class="icon">
-                                <i class="fab fa-apple"></i>
+                            <a href="https://testflight.apple.com/join/EekkAGuh" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Join the Peakchain Mobility TestFlight beta">
+                                <i class="fab fa-apple" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/img/Captures/mobile/tradeup.png" alt="Delivery App" />
+                        <img src="assets/img/Captures/mobile/tradeup.png" alt="TradeUp AI screenshot" loading="lazy" decoding="async" />
                     </div>
                     <div class="hover-items">
                         <h3>TradeUp AI</h3>
-                        <p>Real-time trading plateform</p>
+                        <p>Real-time trading platform</p>
                         <div class="icons">
-                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.tradeup" target="_blank" class="icon">
-                                <i class="fab fa-google-play"></i>
+                            <a href="https://play.google.com/store/apps/details?id=com.peakchain.tradeup" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get TradeUp AI on Google Play">
+                                <i class="fab fa-google-play" aria-hidden="true"></i>
                             </a>
-                            <a href="https://apps.apple.com/us/app/tradeup-ai/id6744612908" target="_blank" class="icon">
-                                <i class="fab fa-apple"></i>
+                            <a href="https://apps.apple.com/us/app/tradeup-ai/id6744612908" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Get TradeUp AI on the App Store">
+                                <i class="fab fa-apple" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -877,14 +618,14 @@
                         <div class="contact-info">
                             <div class="contact-item">
                                 <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                     <span>Location :</span>
                                 </div>
                                 <p>Monastir, Tunisia</p>
                             </div>
                             <div class="contact-item">
                                 <div class="icon">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
                                     <span>Email :</span>
                                 </div>
                                 <p>
@@ -895,19 +636,19 @@
                             </div>
                             <div class="contact-item">
                                 <div class="icon">
-                                    <i class="fas fa-phone"></i>
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
                                     <span>Mobile Number :</span>
                                 </div>
                                 <p>
                                     <a href="tel:+21697488241">
-                                        <i class="fas fa-phone-volume"></i>
+                                        <i class="fas fa-phone-volume" aria-hidden="true"></i>
                                         +216 97488241
                                     </a>
                                 </p>
                             </div>
                             <div class="contact-item">
                                 <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
+                                    <i class="fas fa-globe-africa" aria-hidden="true"></i>
                                     <span>Languages :</span>
                                 </div>
                                 <p>
@@ -922,11 +663,11 @@
                     width: 100%;
                     justify-content: center;
                   ">
-                                <a href="https://www.linkedin.com/in/walidgueddari/" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/walidgueddari/" target="_blank" rel="noopener noreferrer" aria-label="Walid Gueddari on LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://github.com/welidwg" target="_blank">
-                                    <i class="fab fa-github"></i>
+                                <a href="https://github.com/welidwg" target="_blank" rel="noopener noreferrer" aria-label="Walid Gueddari on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -936,27 +677,32 @@
         </section>
     </main>
 
-    <div class="controls">
+    <nav class="controls" aria-label="Section navigation">
         <img src="img/logos/MyLogoWhite.png" alt="Gueddari Walid Logo" id="mylogo" class="" width="30" />
-        <div class="control active-btn" data-id="home">
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-desktop"></i>
-        </div>
-        <div class="control" data-id="mobile-projects">
-            <i class="fas fa-mobile-alt"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
-    </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
+        <button type="button" class="control active-btn" data-id="home" data-label="Home"
+            aria-label="Home">
+            <i class="fas fa-home" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="control" data-id="about" data-label="About"
+            aria-label="About">
+            <i class="fas fa-user" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="control" data-id="portfolio" data-label="Web Projects"
+            aria-label="Web Projects">
+            <i class="fas fa-desktop" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="control" data-id="mobile-projects" data-label="Mobile Apps"
+            aria-label="Mobile Apps">
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="control" data-id="contact" data-label="Contact"
+            aria-label="Contact">
+            <i class="fas fa-envelope-open" aria-hidden="true"></i>
+        </button>
+    </nav>
+    <button type="button" class="theme-btn" aria-label="Switch to light theme" aria-pressed="false">
+        <i class="fas fa-adjust" aria-hidden="true"></i>
+    </button>
     <script src="app.js"></script>
 </body>
 
